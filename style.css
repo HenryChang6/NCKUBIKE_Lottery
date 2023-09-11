@@ -18,8 +18,8 @@ body{
     width: 340px;
     height: 200px;
     position:absolute;
-    top: 480px;
-    left: 950px;
+    top: 60%;
+    left: 65%;
     background-image: url("src/DrawBtn.png");
     background-size: 100% 100%;
     background-color: transparent;
@@ -118,5 +118,13 @@ body{
     height:650px;
     /* opacity: 0; 
     visibility: hidden;  */
+}
+
+#cancelBtn{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: large;
+    font-weight: bold;
 }
 

@@ -1,4 +1,7 @@
 const drawBtn = $('#drawBtn');
+const cancelBtn = $('#cancelBtn')
+const prizeImage = $("#prizeImage");
+const prizeImageContainer = $("#prizeImageContainer");
 
 drawBtn.on('click',(e)=>{
     const randomNumber = Math.random();  // 這會產生一個介於0（包含）到1（不包含）之間的隨機數
@@ -17,20 +20,21 @@ drawBtn.on('click',(e)=>{
     }
 });
 
+cancelBtn.on('click',(e)=>{
+    prizeImage.removeClass('flip-in-hor-bottom').addClass('swirl-out-bck');
+    setTimeout(()=>{
+        prizeImageContainer.hide()
+        prizeImage.removeClass('swirl-out-bck');
+    },1000);
+});
+
 function showImage(prize){
-    const prizeImage = $("#prizeImage");
-    const prizeImageContainer = $("#prizeImageContainer");
     const randomNum = Math.floor(Math.random() * 8) + 1; //0到8
     const pathName = prize + randomNum;
     prizeImage.attr('src',`src/${pathName}.png`);
     prizeImage.addClass('flip-in-hor-bottom');
     prizeImageContainer.show();
-    setTimeout(() => {
-        prizeImage.removeClass('flip-in-hor-bottom').addClass('swirl-out-bck');
-        setTimeout(()=>{
-            prizeImageContainer.hide()
-            prizeImage.removeClass('swirl-out-bck');
-        },1000);
-    }, 4500);
 }
+
+
 
