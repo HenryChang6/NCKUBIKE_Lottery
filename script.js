@@ -28,6 +28,10 @@ cancelBtn.on('click',(e)=>{
     },1000);
 });
 
+$("#fullscreenBtn").on("click", function() {
+    openFullscreen();
+});
+
 function showImage(prize){
     const randomNum = Math.floor(Math.random() * 8) + 1; //0到8
     const pathName = prize + randomNum;
@@ -35,6 +39,19 @@ function showImage(prize){
     prizeImage.addClass('flip-in-hor-bottom');
     prizeImageContainer.show();
 }
+
+function openFullscreen() {
+    let elem = document.documentElement;
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+
 
 
 
