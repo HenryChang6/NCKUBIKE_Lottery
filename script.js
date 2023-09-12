@@ -27,6 +27,7 @@ cancelBtn.on('click',(e)=>{
         prizeImageContainer.hide()
         prizeImage.removeClass('slide-out-top');
     },1000);
+    prizeImage.attr('src','');
 });
 
 fullscreenBtn.on("click", function() {
