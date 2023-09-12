@@ -9,10 +9,10 @@ drawBtn.on('click',(e)=>{
 
     let prize = "";
     
-    if (randomNumber < 0.0625) {
+    if (randomNumber < 0.1667) {
         prize = "big";
         showImage(prize);
-    } else if (randomNumber < 0.3125) {
+    } else if (randomNumber < 0.3333) {
         prize = "mid";
         showImage(prize);
     } else {
