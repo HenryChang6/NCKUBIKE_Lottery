@@ -45,7 +45,7 @@ function showImage(prize){
     },1000);
     setTimeout(()=>{
         prizeImage.attr('src',`src/${pathName}.jpg`);
-    },1500);
+    },1300);
 }
 
 function openFullscreen() {
